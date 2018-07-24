@@ -11,13 +11,16 @@ import {
   FacebookLoginProvider,
   LinkedinLoginProvider
 
-} from "angular-6-social-login";
+} from 'angular-6-social-login';
 
 import { RouterModule, Routes } from '@angular/router';
 import { AuthAPIService } from './services/auth-api.service';
 import { UserService } from './services/user.service';
 
-
+const routes: Routes = [
+  { path: 'home', component: HomePageComponent },
+  { path: '', component: LoginPageComponent }
+  ];
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
@@ -29,11 +32,7 @@ export function getAuthServiceConfigs() {
         {
           id: GoogleLoginProvider.PROVIDER_ID,
           provider: new GoogleLoginProvider('1094067897150-miuatns6qubuo2se6u390alqrjqlh598.apps.googleusercontent.com')
-        },
-          {
-            id: LinkedinLoginProvider.PROVIDER_ID,
-            provider: new LinkedinLoginProvider('1098828800522-m2ig6bieilc3tpqvmlcpdvrpvn86q4ks.apps.googleusercontent.com')
-          }
+        }
       ]
   );
   return config;
@@ -46,7 +45,7 @@ export function getAuthServiceConfigs() {
   ],
   imports: [
     BrowserModule,
-    SocialLoginModule
+    SocialLoginModule, HttpModule, RouterModule.forRoot(routes)
   ],
   providers: [ AuthAPIService, UserService, {
     provide: AuthServiceConfig,
