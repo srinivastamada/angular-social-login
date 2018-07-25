@@ -1,3 +1,6 @@
+<h1>Welcome {{userData?.name}}</h1>
+<b>Email</b>: {{userData?.email}}
+<img [src]="userData?.image" />
 <p>
-  home-page works!
+  <button (click)='logout()' class="btn">Logout</button>
 </p>

@@ -4,9 +4,9 @@ import { Router } from '@angular/router';
 export class UserService {
   constructor(public router: Router) {}
 
-  storeData(data) {
+  async storeData(data) {
     localStorage.setItem('userData', JSON.stringify(data));
-    const newData = this.getData();
+    const newData = await this.getData();
     console.log('New Data');
     console.log(newData);
     return this.router.navigate(['home'], newData);

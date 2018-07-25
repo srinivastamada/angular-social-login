@@ -44,7 +44,7 @@ export class LoginPageComponent implements OnInit {
 
     this.socialAuthService.signIn(socialPlatformProvider).then(userData => {
       console.log(socialPlatform + ' sign in data : ', userData);
-      // this.apiConnection(userData);
+      this.apiConnection(userData);
     });
   }
 
@@ -52,7 +52,7 @@ export class LoginPageComponent implements OnInit {
     this.userPostData.email = data.email;
     this.userPostData.name = data.name;
     this.userPostData.provider = data.provider;
-    this.userPostData.provider_id = data.uid;
+    this.userPostData.provider_id = data.id;
     this.userPostData.provider_pic = data.image;
     this.userPostData.token = data.token;
 
