@@ -1,3 +1,6 @@
+body{
+font-family: 'Playfair Display', serif;
+}
 .btn {
     display: inline-block;
     padding: 6px 12px;
