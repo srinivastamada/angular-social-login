@@ -45,6 +45,11 @@ font-family: 'Playfair Display', serif;
     background-color: #007bb6;
     border-color: rgba(0,0,0,0.2);
 }
+.btn-logout {
+    color: #fff;
+    background-color: #cc0000;
+    border-color: rgba(0,0,0,0.2);
+}
 .btn-social {
     min-width: 200px;
 }

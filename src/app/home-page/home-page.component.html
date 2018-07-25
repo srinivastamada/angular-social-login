@@ -1,6 +1,8 @@
-<h1>Welcome {{userData?.name}}</h1>
-<b>Email</b>: {{userData?.email}}
-<img [src]="userData?.image" />
 <p>
-  <button (click)='logout()' class="btn">Logout</button>
+  <h2>Welcome {{userData?.name}}</h2>
+  <b>Email</b>: {{userData?.email}}
+  <br/>
+  <img [src]="userData?.image" *ngIf="userData?.image" />
+
+  <button (click)='logout()' class="btn btn-social btn-logout">Logout</button>
 </p>
