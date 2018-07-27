@@ -6,9 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 https://www.9lessons.info
 
 ## Installation
-$ git clone https://github.com/srinivastamada/angular-social-login.git
-$ cd angular-social-login
-$ npm install
+$ git clone https://github.com/srinivastamada/angular-social-login.git <br />
+$ cd angular-social-login <br />
+$ npm install <br />
 
 ## Social Plugin
 $ npm install --save angular-6-social-login
