@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { AuthService } from 'angular-6-social-login';
-import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -13,17 +12,13 @@ export class HomePageComponent implements OnInit {
 
   constructor(
     public user: UserService,
-    public socialAuthService: AuthService,
-    public route: ActivatedRoute
+    public socialAuthService: AuthService
   ) {
     this.userData = this.user.getData();
-
-    this.route.params.subscribe(params => console.log(params));
   }
 
   ngOnInit() {
     this.user.sessionOut();
-    // console.log(this.userData);
   }
 
   logout() {

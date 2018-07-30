@@ -7,8 +7,6 @@ export class UserService {
   async storeData(data) {
     localStorage.setItem('userData', JSON.stringify(data));
     const newData = await this.getData();
-    console.log('New Data');
-    console.log(newData);
     return this.router.navigate(['home'], newData);
   }
 
@@ -21,7 +19,6 @@ export class UserService {
     if (this.getData()) {
       A = this.router.navigate(['home'], this.getData());
     }
-
     return A;
   }
 
